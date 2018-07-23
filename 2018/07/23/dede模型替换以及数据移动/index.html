@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>dede模型替换以及数据移动 | 这是一个非常有潜力的Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="最近遇到一个问题：西语站dede后台产品的模型和新闻的模型是同一个。由于产品的参数较多，所以添加新闻时界面上会有许多用不到的输入框；而添加产品时，填写新闻的输入框也没有用。所以，为了方便管理和增加/编辑文档时界面更加清晰，我要给新闻重新建一个模型。  1.新建模型在“核心”标签页下的“频道模型栏目里”，点击“内容模型管理”。如下图：">
+<meta property="og:type" content="article">
+<meta property="og:title" content="dede模型替换以及数据移动">
+<meta property="og:url" content="http://liuss.work/2018/07/23/dede模型替换以及数据移动/index.html">
+<meta property="og:site_name" content="这是一个非常有潜力的Blog">
+<meta property="og:description" content="最近遇到一个问题：西语站dede后台产品的模型和新闻的模型是同一个。由于产品的参数较多，所以添加新闻时界面上会有许多用不到的输入框；而添加产品时，填写新闻的输入框也没有用。所以，为了方便管理和增加/编辑文档时界面更加清晰，我要给新闻重新建一个模型。  1.新建模型在“核心”标签页下的“频道模型栏目里”，点击“内容模型管理”。如下图：">
+<meta property="og:locale" content="default">
+<meta property="og:image" content="https://s1.ax1x.com/2018/07/21/P8wjTx.png">
+<meta property="og:image" content="https://s1.ax1x.com/2018/07/21/P80iXd.png">
+<meta property="og:image" content="https://s1.ax1x.com/2018/07/21/P80K1g.png">
+<meta property="og:image" content="https://s1.ax1x.com/2018/07/21/P803Bn.png">
+<meta property="og:image" content="https://s1.ax1x.com/2018/07/21/P80thT.png">
+<meta property="og:image" content="https://s1.ax1x.com/2018/07/21/P804ud.png">
+<meta property="og:image" content="https://s1.ax1x.com/2018/07/23/PGLCqJ.png">
+<meta property="og:image" content="https://s1.ax1x.com/2018/07/23/PGLZRK.md.png">
+<meta property="og:image" content="https://s1.ax1x.com/2018/07/23/PGLKqH.png">
+<meta property="og:image" content="https://s1.ax1x.com/2018/07/23/PGLGJP.png">
+<meta property="og:image" content="https://s1.ax1x.com/2018/07/23/PGOxuF.png">
+<meta property="og:image" content="https://s1.ax1x.com/2018/07/23/PGOo7j.png">
+<meta property="og:image" content="https://s1.ax1x.com/2018/07/23/PGjCqg.png">
+<meta property="og:image" content="https://s1.ax1x.com/2018/07/23/PGj1o9.md.png">
+<meta property="og:image" content="https://s1.ax1x.com/2018/07/23/PGj2y8.md.png">
+<meta property="og:image" content="https://s1.ax1x.com/2018/07/23/PGOKpV.png">
+<meta property="og:image" content="https://s1.ax1x.com/2018/07/23/PGOtt1.png">
+<meta property="og:image" content="https://s1.ax1x.com/2018/07/23/PGOap6.png">
+<meta property="og:updated_time" content="2018-07-23T02:09:46.983Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="dede模型替换以及数据移动">
+<meta name="twitter:description" content="最近遇到一个问题：西语站dede后台产品的模型和新闻的模型是同一个。由于产品的参数较多，所以添加新闻时界面上会有许多用不到的输入框；而添加产品时，填写新闻的输入框也没有用。所以，为了方便管理和增加/编辑文档时界面更加清晰，我要给新闻重新建一个模型。  1.新建模型在“核心”标签页下的“频道模型栏目里”，点击“内容模型管理”。如下图：">
+<meta name="twitter:image" content="https://s1.ax1x.com/2018/07/21/P8wjTx.png">
+  
+    <link rel="alternate" href="/atom.xml" title="这是一个非常有潜力的Blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">这是一个非常有潜力的Blog</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://liuss.work"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-dede模型替换以及数据移动" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/07/23/dede模型替换以及数据移动/" class="article-date">
+  <time datetime="2018-07-23T02:09:29.000Z" itemprop="datePublished">2018-07-23</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      dede模型替换以及数据移动
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>最近遇到一个问题：西语站dede后台产品的模型和新闻的模型是同一个。由于产品的参数较多，所以添加新闻时界面上会有许多用不到的输入框；而添加产品时，填写新闻的输入框也没有用。所以，为了方便管理和增加/编辑文档时界面更加清晰，我要给新闻重新建一个模型。</p>
+<hr>
+<h3 id="1-新建模型"><a href="#1-新建模型" class="headerlink" title="1.新建模型"></a><strong>1.新建模型</strong></h3><p>在“核心”标签页下的“频道模型栏目里”，点击“内容模型管理”。如下图：<br><a id="more"></a></p>
+<p><img src="https://s1.ax1x.com/2018/07/21/P8wjTx.png" alt="第一步"></p>
+<p>在新打开的界面里，点击右上角的“增加新模型”<br><img src="https://s1.ax1x.com/2018/07/21/P80iXd.png" alt="第一步"></p>
+<p>自定义几个内容之后就可以点击确定了。注意，“模型性质”要选择<code>系统模型</code>，因为系统模型会自动创建一些必备的基本输入框，而这些输入框正是添加新闻时都会用到的<br><em>（在此处四个输入框里的内容是系统自动填写的，实际使用时建议自定义）</em></p>
+<p><img src="https://s1.ax1x.com/2018/07/21/P80K1g.png" alt="第一步"></p>
+<p>完成之后可以就可以使用这个模型了。</p>
+<p>#####<strong><em>下图是使用了此模型的目录的模型界面</em></strong></p>
+<p><img src="https://s1.ax1x.com/2018/07/21/P803Bn.png" alt="第一步"></p>
+<h3 id="2-移动数据"><a href="#2-移动数据" class="headerlink" title="2.移动数据"></a><strong>2.移动数据</strong></h3><p>在目录中我们可以看到，新闻下子栏目的3个id分别是12,13,14</p>
+<p><img src="https://s1.ax1x.com/2018/07/21/P80thT.png" alt=""></p>
+<p>于是我们打开数据库，找到原本模型<code>普通文章</code> 下绑定的数据表<code>sh_addonarticle</code>· 可以看到很多<code>typeid</code>为14的内容（未展示全部），这里<code>typeid</code>为14的内容就是dede后台界面栏目中id为14的栏目<code>Conocimiento</code>中的内容</p>
+<p><img src="https://s1.ax1x.com/2018/07/21/P804ud.png" alt=""></p>
+<p>我们要将它们移动至第一步中新建模型<code>新闻</code><strong><em>(我取名为“新闻”，第一步的图中未显示，下同)</em></strong> 对应的新表<code>sh_addon21</code><strong><em>(同上)</em></strong>里，这里使用了一句Mysql语句：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">INSERT INTO sh_addon21( aid, typeid, body, userip ) </span><br><span class="line">SELECT aid, typeid, body, userip</span><br><span class="line">FROM sh_addonarticle</span><br><span class="line">WHERE typeid</span><br><span class="line">IN ( 12, 13, 14 )</span><br><span class="line"></span><br><span class="line">/*将sh_addonarticle表中id为12,13,14的字段为aid, typeid, body, userip的数据，插入表sh_addon21*/</span><br></pre></td></tr></table></figure>
+<p>移动完成之后，我们的新表里就有了数据(未展示全部)</p>
+<p><img src="https://s1.ax1x.com/2018/07/23/PGLCqJ.png" alt="PGLCqJ.png"></p>
+<h3 id="3-修改模型"><a href="#3-修改模型" class="headerlink" title="3.修改模型"></a><strong>3.修改模型</strong></h3><p>这时候，我们把dede后台中，<code>Noticias</code>的内容模型修改为”新闻”（包括下面3个子栏目也要修改）<br><a href="https://imgchr.com/i/PGLZRK" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2018/07/23/PGLZRK.md.png" alt="PGLZRK.md.png"></a></p>
+<p>修改过后点击确定保存</p>
+<p><a href="https://imgchr.com/i/PGLKqH" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2018/07/23/PGLKqH.png" alt="PGLKqH.png"></a></p>
+<p>此时，如果我们点开栏目<code>Noticias</code>，会发现内容不显示，只显示分页</p>
+<p><a href="https://imgchr.com/i/PGLGJP" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2018/07/23/PGLGJP.png" alt="PGLGJP.png"></a></p>
+<p>这是因为每篇文章在生成的时候，会<strong>绑定当前栏目的内容模型的id号</strong>，我们以上的操作没有涉及它，没有被改动，所以它还是和之前的<code>普通文章</code>模型的id号关联，id号为1。我们需要手动修改</p>
+<p><img src="https://s1.ax1x.com/2018/07/23/PGOxuF.png" alt="PGOxuF.png"><br>打开数据库的<code>sh_archives</code>表，找到<code>typeid</code>为14的数据,可以看到，channel字段就是绑定的数据模型的id号（改之前应为1，图中是改过之后截的，所以是修改过的值）</p>
+<p><img src="https://s1.ax1x.com/2018/07/23/PGOo7j.png" alt="PGOo7j.png"></p>
+<p>我们需要改成我们新模型的id，为21（非固定值，第一步时可自定义）</p>
+<p>这里使用了一句Mysql语句<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">UPDATE  `sh_archives` SET  `channel` =21 WHERE  `typeid` IN ( 12, 13, 14 )</span><br></pre></td></tr></table></figure></p>
+<p>运行成功之后就是上图的结果。</p>
+<p>这时我们再次进入<code>Noticias</code>栏目，就会发现已经出现了新闻</p>
+<p><img src="https://s1.ax1x.com/2018/07/23/PGjCqg.png" alt="PGjCqg.png"></p>
+<p>我们随意选择一篇文章进行编辑</p>
+<p><a href="https://imgchr.com/i/PGj1o9" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2018/07/23/PGj1o9.md.png" alt="PGj1o9.md.png"></a><br><em>（常规信息）</em></p>
+<p><a href="https://imgchr.com/i/PGj2y8" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2018/07/23/PGj2y8.md.png" alt="PGj2y8.md.png"></a><br><em>（高级参数）</em></p>
+<p>发现之前所有的资料都存在。也就是转移成功了。</p>
+<h3 id="4-删除旧数据-谨慎操作"><a href="#4-删除旧数据-谨慎操作" class="headerlink" title="4.*删除旧数据(谨慎操作)"></a><strong>4.*删除旧数据(谨慎操作)</strong></h3><p><strong><em>Alert：此操作可能会有危险，操作前请备份！！！</em></strong><br><strong><em>Alert：此操作可能会有危险，操作前请备份！！！</em></strong><br><strong><em>Alert：此操作可能会有危险，操作前请备份！！！</em></strong></p>
+<p>将新闻从老表转移到新表之后，老表中的数据就不需要了，我们将它删除。</p>
+<p>使用一句Mysql语句<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">DELETE FROM `sh_addonarticle` WHERE `typeid` IN ( 12, 13, 14 )</span><br></pre></td></tr></table></figure></p>
+<p>执行后即可。</p>
+<p>##（补充知识）<br>栏目<code>123</code>的模型是<code>新闻</code><br><img src="https://s1.ax1x.com/2018/07/23/PGOKpV.png" alt="PGOKpV.png"></p>
+<p>栏目<code>Noticias</code>的模型是<code>新闻</code><br><img src="https://s1.ax1x.com/2018/07/23/PGOtt1.png" alt="PGOtt1.png"></p>
+<p>在<code>Noticias</code>中文章的<code>文章主栏目</code>里，会显示相同模型的栏目。<br><img src="https://s1.ax1x.com/2018/07/23/PGOap6.png" alt="PGOap6.png"></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://liuss.work/2018/07/23/dede模型替换以及数据移动/" data-id="cjjxmrb5p0000qgd853stji2w" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2018/07/19/下划线相关/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">下划线相关</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2018/07/23/dede模型替换以及数据移动/">dede模型替换以及数据移动</a>
+          </li>
+        
+          <li>
+            <a href="/2018/07/19/下划线相关/">下划线相关</a>
+          </li>
+        
+          <li>
+            <a href="/2018/07/04/-stop-好看的简单效果/">stop好看的简单效果</a>
+          </li>
+        
+          <li>
+            <a href="/2018/06/21/字符串处理/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2018/05/02/test/">这是一篇测试文章</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 lss<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
