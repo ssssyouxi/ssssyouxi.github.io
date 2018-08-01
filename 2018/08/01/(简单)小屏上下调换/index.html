@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>(简单)小屏上下调换 | 这是一个非常有潜力的Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="重构专题/模板的时候，有时候会出现图片和文字交错的设计，如下 图 | 文字文字 | 图图 | 文字文字 | 图">
+<meta property="og:type" content="article">
+<meta property="og:title" content="(简单)小屏上下调换">
+<meta property="og:url" content="http://liuss.work/2018/08/01/(简单)小屏上下调换/index.html">
+<meta property="og:site_name" content="这是一个非常有潜力的Blog">
+<meta property="og:description" content="重构专题/模板的时候，有时候会出现图片和文字交错的设计，如下 图 | 文字文字 | 图图 | 文字文字 | 图">
+<meta property="og:locale" content="default">
+<meta property="og:image" content="https://s1.ax1x.com/2018/08/01/PwDnPg.md.png">
+<meta property="og:image" content="https://s1.ax1x.com/2018/08/01/PwDydK.png">
+<meta property="og:image" content="https://s1.ax1x.com/2018/08/01/PwDqJg.md.png">
+<meta property="og:image" content="https://s1.ax1x.com/2018/08/01/Pwr8ld.png">
+<meta property="og:image" content="https://s1.ax1x.com/2018/08/01/Pwrrlj.png">
+<meta property="og:updated_time" content="2018-08-01T07:01:04.684Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="(简单)小屏上下调换">
+<meta name="twitter:description" content="重构专题/模板的时候，有时候会出现图片和文字交错的设计，如下 图 | 文字文字 | 图图 | 文字文字 | 图">
+<meta name="twitter:image" content="https://s1.ax1x.com/2018/08/01/PwDnPg.md.png">
+  
+    <link rel="alternate" href="/atom.xml" title="这是一个非常有潜力的Blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">这是一个非常有潜力的Blog</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://liuss.work"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-(简单)小屏上下调换" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/08/01/(简单)小屏上下调换/" class="article-date">
+  <time datetime="2018-08-01T05:31:30.000Z" itemprop="datePublished">2018-08-01</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      (简单)小屏上下调换
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>重构专题/模板的时候，有时候会出现<code>图片和文字交错</code>的设计，如下</p>
+<p>图 | 文字<br>文字 | 图<br>图 | 文字<br>文字 | 图<br><a id="more"></a><br><a href="https://imgchr.com/i/PwDnPg" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2018/08/01/PwDnPg.md.png" alt="PwDnPg.md.png"></a></p>
+<p>这样的话，在不改变代码的情况下，在小屏的时候，显示的状况就会是如下<br>图<br>文字<br>文字<br>图<br>图<br>文字<br>文字<br>图</p>
+<p><img src="https://s1.ax1x.com/2018/08/01/PwDydK.png" alt="PwDydK.png"></p>
+<p>这样的用户体验不好。<br>比较简单的解决办法是，在拼图里有一个类，叫做x( <em>)-left 和 x( </em>)-right<br><a href="https://imgchr.com/i/PwDqJg" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2018/08/01/PwDqJg.md.png" alt="PwDqJg.md.png"></a></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">x8 x4-right</span><br></pre></td></tr></table></figure>
+<p>意思是现在的宽度占8份，距离左边4份</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">x4 x8-right</span><br></pre></td></tr></table></figure>
+<p>意思是现在的宽度占4份，距离右边8份</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"line"</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"x4 x8-left"</span>&gt;</span> x4 x8-left<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">	 <span class="comment">&lt;!--虽然写在上边，但是显示在右边--&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"x8 x4-right"</span>&gt;</span> x8 x4-right<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">	<span class="comment">&lt;!--虽然写在左边，但是显示在左边--&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>回到代码里，我们将图片部分和文字部分作交换，然后在类里加上对方的长度的移动距离</p>
+<p>这个时候，虽然上下是反着写的（也就是显示的左右是反的），但是我们用了<code>X（*）-left类</code>之后,在适用范围内是没有区别的<br><img src="https://s1.ax1x.com/2018/08/01/Pwr8ld.png" alt="Pwr8ld.png"></p>
+<p>因为我用的是<code>xm</code>，所以大屏不会有影响，在<code>`1000px</code>以下的时候，失去了向左右移动的效果，我们就可以看到<br>图<br>文字<br>图<br>文字<br>图<br>文字<br>图<br>文字</p>
+<p><img src="https://s1.ax1x.com/2018/08/01/Pwrrlj.png" alt="Pwrrlj.png"><br>变得好看了</p>
+<p>其他案例</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://liuss.work/2018/08/01/(简单)小屏上下调换/" data-id="cjkas6yn40000k4d8ioucpict" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2018/07/23/dede模型替换以及数据移动/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">dede模型替换以及数据移动</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2018/08/01/(简单)小屏上下调换/">(简单)小屏上下调换</a>
+          </li>
+        
+          <li>
+            <a href="/2018/07/23/dede模型替换以及数据移动/">dede模型替换以及数据移动</a>
+          </li>
+        
+          <li>
+            <a href="/2018/07/19/下划线相关/">下划线相关</a>
+          </li>
+        
+          <li>
+            <a href="/2018/07/04/-stop-好看的简单效果/">stop好看的简单效果</a>
+          </li>
+        
+          <li>
+            <a href="/2018/06/21/字符串处理/">字符串处理</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 lss<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
